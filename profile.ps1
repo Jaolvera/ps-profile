@@ -1,7 +1,7 @@
 <# 
 
 .SYNOPSIS 
-    Profile Script. Last Modified 10/06/2021
+    Profile Script. Last Modified 10/06/2025
 
 .DESCRIPTION 
 	something borrowed, something blue, something old
@@ -39,9 +39,9 @@ $datecon = get-date -UFormat "%A, %b %d %Y %I:%M %p"
 $date = Get-Date -UFormat "%Y-%m-%d"
 $host.ui.RawUI.WindowTitle = " Started $datecon "
 Write-Host "loading, please wait..." -foregroundcolor green
-if( -Not (Test-Path -Path $Env:userprofile\'OneDrive - SPS Commerce, Inc\Documents\ps-scripts' ) )
+if( -Not (Test-Path -Path $Env:userprofile\'scripts' ) )
 {
-    New-Item -ItemType directory -Path $Env:userprofile\'OneDrive - SPS Commerce, Inc\Documents\ps-scripts'
+    New-Item -ItemType directory -Path $Env:userprofile\'scripts'
 	}
 Start-Sleep -s 1
 cls
@@ -137,7 +137,7 @@ if ($searchresults -eq $null) {
 ### just need to edit with your account below###
 
 Function Go-365admin {
-Connect-ExchangeOnline -UserPrincipalName jaolvera.admin@spscommerce.onmicrosoft.com
+Connect-ExchangeOnline -UserPrincipalName 
 }	
 
 function Get-LoggedOnUser {
@@ -276,3 +276,4 @@ function title-rename {
 	$host.ui.RawUI.WindowTitle = " [ $newtitle ] "
 	}
 #>
+
